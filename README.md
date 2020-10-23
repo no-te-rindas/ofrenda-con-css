@@ -1,6 +1,7 @@
 # Concurso Día de muertos
 ​
 En México cada año se celebra durante el 1 y 2 de noviembre el día de muertos, una tradición que es reconocida mundialmente y de la cual una parte muy importante son las ofrendas, las flores de cempasúchil, el papel picado y las calaveritas de dulce, tomando estos elementos creamos el reto #OfrendaConCSS.
+
 ​
 El reto es replicar este diseño en HTML y CSS. 🎨
 
