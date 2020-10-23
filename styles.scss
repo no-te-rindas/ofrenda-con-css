@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&display=swap');
+
+$break-large: 620px;
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #361154;
+    height: 100vh;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+    margin-left: -100px;
+    @media screen and (max-width: $break-large) {
+        margin-left: 0px;
+      }
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.yellow {
+    color: #FFB000;
+}
+
+.back {
+    margin:0 auto;
+    width:200px;
+    height:200px;
+    transition: background-image .5s;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    position: relative;
+
+    & .title {
+        position: absolute;
+        top: 20%;
+        right: 0;
+        background-color: #361154;
+        font-size: 3em;
+        padding: 0px 50px;
+
+        @media screen and (max-width: $break-large) {
+            width: 100%;
+            top: 0;
+            font-size: 2em;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            padding-top: 30px;
+            padding-bottom: 30px;
+          }
+
+        & h1 {
+            padding: 0;
+            margin: 0;
+        }
+    }
+  }
+
+  .item-a {
+    @extend .flex;
+    &__img {
+        @extend .back;
+        background-image:url("assets/up.svg");
+        &:hover {
+            background-image:url("assets/up-color.svg");
+        }
+
+        
+    }
+  }
+
+  .item-b {
+    @extend .flex;
+    &__img {
+        @extend .back;
+        background-image:url("assets/down.svg");
+        &:hover {
+            background-image:url("assets/down-color.svg");
+        }
+    }
+  }
+
+  
+.extra {
+    background-image:url("assets/skull-1.svg");
+}
