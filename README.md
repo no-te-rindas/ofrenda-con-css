@@ -21,8 +21,10 @@ Y también puedes ver la animación aquí: [Ver animación](https://www.figma.co
 - En la descripción del pull request coloca tu correo.
 - Los pull request serán aceptados del 24 de octubre al 2 de noviembre a las 11:59 PM
 ​
+
 Siéntete libre de decorar la calaverita a tu gusto, el diseño solo te sirve de guía, pero valoramos muchísimo tu creatividad y tus habilidades, así que deja tu cabeza volar que estamos ansiosos de ver tu creación.
 ​
+
 Utiliza el **#OfrendaConCSS** para mostrar tu avance, o tu reto terminado en redes sociales, no dudes en etiquetar a @LeonidasEsteban.
 ​
 ### Premios 🎁
