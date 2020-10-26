@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, helvetica, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #361154;
+}
+
+main {
+  display: grid;
+  grid-template-rows: repeat(4, 224px);
+  grid-template-columns: auto 672px;
+  grid-template-areas:
+    'skull-1 skull-1'
+    'skull-2 trick'
+    'skull-3 skull-3'
+    'skull-4 skull-4';
+  row-gap: 16px;
+  justify-content: flex-end;
+}
+
+.row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.first-row {
+  grid-area: skull-1;
+}
+
+.second-row {
+  grid-area: skull-2;
+}
+
+.trick-text {
+  grid-area: trick;
+  font-family: Inter, System-ui, Helvetica, Sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 97px;
+  background-color: #361154;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 64px;
+
+  position: relative;
+}
+
+.trick-text span {
+  color: #ffb000;
+}
+
+.trick-text p {
+  margin: 0;
+}
+
+.third-row {
+  grid-area: skull-3;
+}
+
+.fourth-row {
+  grid-area: skull-4;
+}
+
+.skull {
+  width: 224px;
+  height: 224px;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+  background-size: 224px;
+  transition: all 0.2s ease-in-out;
+}
+
+.skull-up {
+  background-image: url(../assets/skull-up-pink.svg);
+}
+
+.skull-up:hover {
+  background-image: url(../assets/skull-up-white.svg);
+}
+
+.skull-down {
+  background-image: url(../assets/skull-down-pink.svg);
+}
+
+.skull-down:hover {
+  background-image: url(../assets/skull-down-white.svg);
+}
+
+.img {
+  width: 40px;
+  height: 40px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  margin: 15px;
+
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+  outline: 0;
+}
+
+.btn-animate-all-skulls {
+  top: 0;
+  right: 0;
+  background: #ffb000;
+}
+
+.btn-animate-all-skulls::before {
+  content: '';
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+
+  box-shadow: -3px -3px 6px rgba(255, 255, 255, 0.7),
+    6px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-animate-all-skulls:active:before {
+  box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.7),
+    inset 4px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.btn-animate-skull {
+  top: 0;
+  right: 100px;
+  background: #2eb3ac;
+}
+
+.btn-animate-skull::before {
+  content: '';
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+
+  box-shadow: -3px -3px 6px rgba(255, 255, 255, 0.7),
+    6px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-animate-skull:active:before {
+  box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.7),
+    inset 4px 4px 4px rgba(0, 0, 0, 0.3);
+}

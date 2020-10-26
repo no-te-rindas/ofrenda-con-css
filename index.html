@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Día de muertos</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main>
+      <div id="first-row" class="row first-row"></div>
+      <div id="second-row" class="row second-row"></div>
+      <div id="trick-text" class="row trick-text">
+        <p>
+          <span>Trucazos</span><br />
+          del más allá
+        </p>
+
+        <button id="btn-animate-all" class="btn btn-animate-all-skulls">
+          <img src="assets/flower-3.svg" alt="Flower 3" />
+        </button>
+
+        <button class="btn btn-animate-skull">
+          <img src="assets/flower-4.svg" />
+        </button>
+      </div>
+      <div id="third-row" class="row third-row"></div>
+      <div id="fourth-row" class="row fourth-row"></div>
+    </main>
+
+    <script>
+      //Generate Skulls
+      let screenWidth = screen.width;
+
+      const arrayElements = [
+        {
+          element: 'first-row',
+          get currentScreen() {
+            return screenWidth;
+          },
+        },
+        {
+          element: 'second-row',
+          get currentScreen() {
+            return screenWidth - 672;
+          },
+        },
+        {
+          element: 'third-row',
+          get currentScreen() {
+            return screenWidth;
+          },
+        },
+        {
+          element: 'fourth-row',
+          get currentScreen() {
+            return screenWidth;
+          },
+        },
+      ];
+
+      const generateSkulls = (arrayElements) => {
+        arrayElements.forEach((item, index) => {
+          let skullsRow = '';
+          let direction = index % 2 === 0 ? 'up' : 'down';
+
+          for (let index = 0; index < item.currentScreen / 224; index++) {
+            skullsRow += `<div class="skull skull-${direction}"></div>`;
+          }
+
+          window[item.element].innerHTML = skullsRow;
+        });
+      };
+
+      generateSkulls(arrayElements);
+
+      setInterval(() => {
+        if (screenWidth !== screen.width) {
+          screenWidth = screen.width;
+          generateSkulls(arrayElements);
+        }
+      }, 1000);
+
+      //End Generate
+
+      //Action btn animate all skulls
+      window['btn-animate-all'].addEventListener('click', () => {
+        console.log('Animate all');
+      });
+      //End Action btn animate all skulls
+    </script>
+  </body>
+</html>
