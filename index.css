@@ -1,0 +1,494 @@
+:root{
+  --white: white;
+  --black: black;
+  --decoration-bottom: blue;
+  --decoration-bottom-inner: red;
+  --eye-first: red;
+  --eye-second: blue;
+  --decoration-head-background: purple;
+  --decoration-head-border: pink;
+}
+
+
+body {
+  background: #361154;
+  display: grid;
+  height: 100vh;
+  margin: 0;
+  font-family: system-ui;
+  grid-template-rows: 1fr;
+}
+
+.text {
+  margin: 20px 40px 40px;
+  font-size: 72px;
+  color: white;
+  font-size: 40px;
+}
+
+.text span {
+  color: #FFB000;
+}
+
+.skull-container {
+  position: relative;
+}
+
+@media(min-width: 1024px){
+  body {
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .text {
+    grid-area: 2 / 5 / 3 / 8;
+    font-size: 72px;
+    margin: 24px;
+  }
+  .skull-container {
+    transform: scale(0.5);
+  }
+}
+
+.rotate {
+  transform: scale(-0.5) translate(0, -20px);
+}
+
+.skull {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 200px;
+}
+
+.container > div {
+  position: absolute;
+}
+
+
+/* Head */
+/* ------------------------ */
+.head-top {
+  position: absolute;
+  height: 231px;
+  background: var(--white);
+  border-radius: 50%;
+  width: 268px;
+  border: 7px solid var(--black);
+  left: -141px;
+  top: -66px;
+  overflow: hidden;
+}
+.head-sides {
+  position: absolute;
+  border-radius: 50% 50% 0% 0%;
+  background: var(--white);
+  height: 200px;
+  width: 100px;
+  top: 0;
+}
+.head-left {
+  right: 20px;
+  transform: rotate(-25deg);
+  border-left: 7px solid var(--black);
+}
+.head-right {
+  left: 20px;
+  transform: rotate(25deg);
+  border-right: 7px solid var(--black);
+}
+
+
+
+/* Checkbone */
+/* ------------------------ */
+.checkbone-top {
+  position: absolute;
+  background: var(--white);
+  border-radius: 0 0 30px 30px;
+  height: 75px;
+  bottom: -58px;
+  width: 178px;
+  left: -96px;
+  border: 7px solid var(--black);
+  border-top: none;
+}
+.checkbone-bottom {
+  position: absolute;
+  background: var(--white);
+  border-bottom: 7px solid var(--black);
+  width: 91px;
+  bottom: -84px;
+  height: 36px;
+  left: -45px;
+}
+.checkbone-bottom::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: var(--white);
+  border-bottom: 7px solid var(--black);
+  width: 53px;
+  height: 36px;
+  right: 0;
+  left: -35px;
+  top: -13px;
+  transform: rotate(40deg);
+}
+.checkbone-bottom::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: var(--white);
+  border-bottom: 7px solid var(--black);
+  width: 53px;
+  height: 36px;
+  right: 0;
+  right: -35px;
+  top: -13px;
+  transform: rotate(-40deg);
+}
+
+
+
+/* Cheek */
+/* -------------------- */
+.cheek {
+  position: absolute;
+  background: var(--white);
+  border: 8px solid var(--black);
+  border-bottom-width: 3px;
+  width: 106px;
+  top: 102px;
+  height: 75px;
+}
+.cheek-right {
+  border-left: none;
+  border-top: none;
+  transform: rotate(-27deg);
+  border-radius: 0px 10px 106px 31px;
+  left: 25px;
+}
+.cheek-left {
+  border-right: none;
+  border-top: none;
+  transform: rotate(27deg);
+  border-radius: 10px 0px 31px 106px;
+  right: 25px;
+}
+.cheek-line {
+  position: absolute;
+  border: 5px solid var(--black);
+  border-bottom: none;
+  width: 40px;
+  height: 48px;
+  top: 180px;
+}
+.cheek-line-right {
+  border-right: none;
+  border-radius: 20px 0;
+  left: 45px;
+  background: linear-gradient(138deg, rgba(0,0,0,1) 0%, rgba(135,135,135,1) 31%, rgba(255,255,255,0) 63%);
+}
+.cheek-line-left {
+  border-left: none;
+  border-radius: 0px 20px;
+  right: 45px;
+  background: linear-gradient(226deg, rgba(0,0,0,1) 0%, rgba(135,135,135,1) 31%, rgba(255,255,255,0) 63%);
+}
+
+
+/* Fron Lines Decoration */
+/* ------------------------- */
+.front-line {
+  position: absolute;
+  border: 7px solid var(--black);
+  width: 80px;
+  height: 35px;
+  top: 24px;
+  border-top: none;
+}
+.front-line-right {
+  border-radius: 36px 0px 0px 60px / 28px 0px 0 18px;
+  border-left-width: 3px;
+  border-right: none;
+  transform: rotate(52deg);
+  left: 62px;
+}
+.front-line-left {
+  border-radius: 0 36px 60px 0 / 0 28px 18px 0;
+  border-right-width: 3px;
+  border-left: none;
+  transform: rotate(-52deg);
+  right: 62px;
+}
+
+
+/* Mouth */
+/* ------------------------- */
+.mouth {
+  height: 50px;
+  width: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr 1.2fr 1.2fr 1.1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  position: absolute;
+  top: 190px;
+  left: -50px;
+}
+
+.tooth {
+  border: 4px solid var(--black);
+  background: var(--white);
+}
+
+.tooth-top {
+  border-radius: 45% 45% 0 0;
+}
+
+.tooth-bottom {
+  border-radius: 0 0 45% 45%;
+}
+
+
+
+/* Eye */
+/* ------------------------- */
+.eye {
+  position: absolute;
+  background: var(--black);
+  width: 80px;
+  height: 90px;
+  border-radius: 50%;
+  top: 45px;
+  box-shadow: inset 0px 0px 6px 4px var(--eye-first), inset 0px 0px 8px 5px var(--eye-second);
+}
+.eye-right {
+  right: 10px;
+  transform: rotate(77deg);
+}
+.eye-left {
+  left: 10px;
+  transform: rotate(277deg);
+}
+
+
+/* Nose */
+/* ------------------------- */
+.nose-top {
+  position: absolute;
+  background: var(--black);
+  width: 22px;
+  height: 45px;
+  top: 115px;
+}
+.nose-right-top {
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  right: 2px;
+}
+.nose-left-top {
+  clip-path: polygon(0 0, 0% 100%, 100% 100%);
+  left: 2px;
+}
+.nose-bottom {
+  position: absolute;
+  background: var(--black);
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  top: 150px;
+}
+.nose-right-bottom {
+  right: 2px;
+}
+.nose-left-bottom {
+  left: 2px;
+}
+
+
+
+/* Checkbone Decoration */
+/* ------------------------- */
+.decoration-bottom {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  right: -89px;
+  top: 204px;
+  overflow: hidden;
+  width: 178px;
+  height: 65px;
+  clip-path: polygon(0% 0%, 0% 56%, 19% 100%, 81% 100%, 100% 56%, 100% 0%);
+}
+.decoration-bottom-left {
+  position: relative;
+  transform: rotate(29deg);
+  box-shadow: inset 0px 0px 10px 0px var(--decoration-bottom);
+  border: 4px solid var(--decoration-bottom);
+  border-radius: 40%;
+  width: 90px;
+  height: 90px;
+  top: 10px;
+  right: 62px;
+  display: flex;
+}
+.decoration-bottom-right {
+  position: relative;
+  transform: rotate(329deg);
+  box-shadow: inset 0px 0px 10px 0px var(--decoration-bottom);
+  border: 4px solid var(--decoration-bottom);
+  border-radius: 40%;
+  width: 90px;
+  height: 90px;
+  top: 10px;
+  left: 62px;
+  display: flex;
+}
+.decoration-bottom-left--inner {
+  margin: auto;
+  border-radius: 40%;
+  border: 4px solid var(--decoration-bottom-inner);
+  box-shadow: inset 0px 0px 10px 0px var(--decoration-bottom-inner);
+  width: 70px;
+  height: 70px;
+}
+.decoration-bottom-right--inner {
+  margin: auto;
+  border-radius: 40%;
+  border: 4px solid var(--decoration-bottom-inner);
+  box-shadow: inset 0px 0px 10px 0px var(--decoration-bottom-inner);
+  width: 70px;
+  height: 70px;
+}
+
+
+
+/* Front Figure */
+/* ------------------------- */
+.front-figure-container {
+  position: absolute;
+}
+.front-figure {
+  position: absolute;
+  transform: rotate(45deg);
+  background: var(--decoration-head-background);
+  box-shadow: 0px 0px 0px 2px var(--white), 0px 0px 0px 4px var(--black);
+  width: 5px;
+  height: 5px;
+  border: 2px solid var(--decoration-head-border);
+  left: -5px;
+  bottom: -62px;
+}
+.front-figure.first {
+  z-index: 11;
+}
+.front-figure.second {
+  bottom: -45px;
+  width: 8px;
+  height: 8px;
+  left: -7px;
+  box-shadow: 0px 0px 0px 2px var(--white), 0px 0px 0px 5px var(--black);
+  z-index: 10;
+}
+.front-figure.third {
+  bottom: -27px;
+  width: 13px;
+  height: 13px;
+  left: -10px;
+  box-shadow: 0px 0px 0px 2px var(--white), 0px 0px 0px 5px var(--black);
+  z-index: 9;
+}
+.front-figure.fourth {
+  box-shadow: 0px 0px 0px 3px var(--white), 0px 0px 0px 7px var(--black);
+  border: 3px solid var(--decoration-head-border);
+  z-index: 8;
+  bottom: -10px;
+  left: -11px;
+  width: 13px;
+  height: 13px;
+}
+.front-figure.fiveth {
+  box-shadow: 0px 0px 0px 4px var(--white), 0px 0px 0px 8px var(--black);
+  border: 4px solid var(--decoration-head-border);
+  z-index: 8;
+  bottom: 10px;
+  left: -14px;
+  width: 16px;
+  height: 16px;
+  z-index: 7;
+}
+
+
+.head-decoration {
+  position: absolute;
+  transform: rotate(45deg);
+  background: var(--decoration-head-background);
+  box-shadow: 0px 0px 0px 2px var(--white), 0px 0px 0px 4px var(--black);
+  width: 5px;
+  height: 5px;
+  border: 2px solid var(--decoration-head-border);
+  left: 0px;
+  top: 0px;
+}
+.head-decoration.first {
+  top: 37px;
+  left: 28px;
+  transform: rotate(2deg);
+}
+.head-decoration.second {
+  top: 15px;
+  left: 56px;
+  transform: rotate(14deg);
+}
+.head-decoration.third {
+  top: 2.5px;
+  left: 88px;
+  transform: rotate(30deg);
+}
+.head-decoration.fourth {
+  top: 2.5px;
+  left: 168px;
+  transform: rotate(-30deg);
+}
+.head-decoration.fiveth {
+  top: 15px;
+  left: 201px;
+  transform: rotate(-14deg);
+}
+.head-decoration.sixth {
+  top: 37px;
+  left: 232px;
+  transform: rotate(-2deg);
+}
+
+
+
+/* Head with Chris Design */
+/* .head-top-chris {
+  width: 300px;
+  left: -156px;
+}
+.head-right-chris {
+  top: 10px;
+  left: 18px;
+  height: 220px;
+  transform: rotate(39deg);
+  background: blue;
+}
+.head-left-chris {
+  top: 10px;
+  right: 18px;
+  transform: rotate(-39deg);
+  height: 220px;
+  background: red;
+}
+.checkbone-chris {
+  border: 7px solid var(--black);
+  border-radius: 0 0 188px 188px;
+  background: purple;
+  border-top: none;
+  width: 188px;
+  height: 83px;
+  top: 163px;
+  right: -101px;
+} */
