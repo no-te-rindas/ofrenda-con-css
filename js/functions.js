@@ -23,4 +23,4 @@ function playMusic(){
 }
 
 
-playMusic();
+// playMusic();

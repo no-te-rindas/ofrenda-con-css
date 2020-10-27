@@ -56,7 +56,9 @@ figure{
     vertical-align: top;
     margin: 0;
 }
-
+.audio{
+    opacity:0;
+}
 .wrapper {
     height: 100vh;
     display: grid;
