@@ -80,14 +80,29 @@
             </figure>
         </div>
     </main>
+    <div id="play" class="play-btn icon-play3">
+    </div>
     <audio id="audio" src="./assets/esto_es_halloween.mp3">
         Your browser does not support the <code>audio</code> element.
     </audio>
     <script>
-        var x = document.getElementById("audio");
-        setTimeout(function(){
-            x.play();
-        }, 3000);
+        const audio = document.getElementById("audio");
+        const btnPlay = document.getElementById("play");
+        btnPlay.addEventListener('click', playMusic);
+        let play = 0;
+        function playMusic(){
+            if (play === 0) {
+                btnPlay.classList.remove("icon-play3");
+                btnPlay.classList.add("icon-pause2");
+                audio.play();
+                play=1;
+            }else{
+                btnPlay.classList.remove("icon-pause2");
+                btnPlay.classList.add("icon-play3");
+                audio.pause();
+                play=0;
+            }
+        }
     </script>
 </body>
 </html>
