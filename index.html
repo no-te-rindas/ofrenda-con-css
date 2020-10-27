@@ -80,10 +80,14 @@
             </figure>
         </div>
     </main>
-    <audio src="./assets/esto_es_halloween.mp3"
-       autoplay>
+    <audio id="audio" src="./assets/esto_es_halloween.mp3">
         Your browser does not support the <code>audio</code> element.
     </audio>
-    <!-- <iframe src="./assets/esto_es_halloween.mp3" allow="autoplay" id="audio" style="display: none"></iframe> -->
+    <script>
+        var x = document.getElementById("myAudio");
+        setTimeout(function(){
+            x.play();
+        }, 3000);
+    </script>
 </body>
 </html>
