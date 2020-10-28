@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Día de muertos</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main>
+      <div id="first-row" class="row first-row"></div>
+      <div id="second-row" class="row second-row"></div>
+      <div id="trick-text" class="row trick-text">
+        <p>
+          <span>Trucazos</span><br />
+          del más allá
+        </p>
+
+        <button id="btn-animate-all" class="btn btn-animate-all-skulls">
+          <img src="assets/flower-3.svg" alt="Flower 3" />
+        </button>
+      </div>
+      <div id="third-row" class="row third-row"></div>
+      <div id="fourth-row" class="row fourth-row"></div>
+    </main>
+
+    <script>
+      //Generate Skulls
+      let screenWidth = screen.width;
+
+      const arrayElements = [
+        {
+          element: 'first-row',
+          get currentScreen() {
+            return screenWidth;
+          },
+        },
+        {
+          element: 'second-row',
+          get currentScreen() {
+            return screenWidth - 672;
+          },
+        },
+        {
+          element: 'third-row',
+          get currentScreen() {
+            return screenWidth;
+          },
+        },
+        {
+          element: 'fourth-row',
+          get currentScreen() {
+            return screenWidth;
+          },
+        },
+      ];
+
+      const generateSkulls = (arrayElements) => {
+        arrayElements.forEach((item, index) => {
+          let skullsRow = '';
+          let direction = index % 2 === 0 ? 'up' : 'down';
+
+          for (let count = 0; count < item.currentScreen / 224; count++) {
+            skullsRow += `<div id="skull${count}${index}" class="skull skull-${direction}"></div>`;
+          }
+
+          window[item.element].innerHTML = skullsRow;
+        });
+      };
+
+      generateSkulls(arrayElements);
+
+      setInterval(() => {
+        if (screenWidth !== screen.width) {
+          screenWidth = screen.width;
+          generateSkulls(arrayElements);
+        }
+      }, 1000);
+
+      //End Generate
+
+      //Action btn animate all skulls
+      const skullElement = document.getElementById('skull31');
+
+      const animationSkull = skullElement.animate(
+        [
+          {
+            transform: 'rotate(0deg)',
+            backgroundImage: 'url(assets/skull-down-pink.svg)',
+          },
+          {
+            transform: 'rotate(540deg)',
+            backgroundImage: 'url(assets/skull-down-white.svg)',
+          },
+        ],
+        {
+          duration: 1000,
+          fill: 'forwards',
+          direction: 'alternate',
+          easing: 'ease-in-out',
+        }
+      );
+
+      let toggle = true;
+
+      window['btn-animate-all'].addEventListener('click', () => {
+        if (toggle) {
+          animationSkull.play();
+          toggle = !toggle;
+        } else {
+          animationSkull.reverse();
+        }
+      });
+
+      animationSkull.pause();
+      //End Action btn animate all skulls
+    </script>
+  </body>
+</html>
