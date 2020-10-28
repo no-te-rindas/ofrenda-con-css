@@ -97,7 +97,7 @@ function leerCalaverita(){
         // alert(page_type)
         setTimeout(() => {
             modalCalavera.classList.toggle("closeModal");
-            document.getElementById("textCalavera").innerHTML=page_type.replace("_"," ");    
+            document.getElementById("textCalavera").innerHTML=page_type.replace(/_/g, " ");    
         }, 3000);
     }
 }
