@@ -22,5 +22,7 @@ function playMusic(){
     }
 }
 
-
-// playMusic();
+function init(){
+    playMusic();
+}
+init();
