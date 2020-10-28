@@ -234,6 +234,6 @@ figure{
         grid-template-columns: repeat(6, 1fr);
     }
     .sidebar h1{
-        font-size: 4rem;
+        font-size: 4.5rem;
     }
 }
