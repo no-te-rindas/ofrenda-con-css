@@ -90,14 +90,14 @@
     <div id="create" class="create-btn">
         +
     </div>
-    <div id="modal" class="modalOverlay closeModal">
+    <div id="modal" class="modalOverlay">
         <div class="modal">
             <a href="#close" id="close" class="close">&times;</a>
             <div class="modalBody">
-                <form id="form">
+                <form id="form" method="GET"  action="/">
                     <h2>Agrega tu calaverita</h2>
-                    <textarea name="" id="text" cols="30" rows="10" required></textarea>
-                    <button id="btnLink">Crear calaverita</button>
+                    <textarea name="calaverita" id="text" cols="30" rows="10" required></textarea>
+                    <button type="submit" id="btnLink">Crear calaverita</button>
                     <div id="responseError" class="responseError hidden">El texto de tu calaverita esta vacio...!</div>
                 </form>
                 <div id="wrapperShare" class="wrapperShare hidden">

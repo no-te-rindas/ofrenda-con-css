@@ -56,6 +56,10 @@ function createLink(e){
     } else {
         // limpiar texto de espacios y saltos de linea
         const textoLimpio = limpiar(text);
+        // var txt = new ActiveXObject("Scripting.FileSystemObject");
+        //         var s = txt.CreateTextFile("11.txt", true);
+        //         s.WriteLine('Hello');
+        //         s.Close();
         // creamos url
         const URLactual = window.location;
         url = URLactual.protocol+"//"+URLactual.host+URLactual.pathname+"?calavera="+textoLimpio;
@@ -67,8 +71,9 @@ function createLink(e){
         shareFacebook.href=facebook;
         
 
-        form.classList.add('hidden');
+        // form.classList.add('hidden');
         wrapperShare.classList.remove('hidden');
+        console.log(whatsapp)
     }
     
 
@@ -76,8 +81,9 @@ function createLink(e){
 
 function limpiar(text){
     // limpiamos saltos de linea
-    text = text.replace(/\n|\r/g, "+")
-    text = text.replace(" ", "+")
+    text = text.replace(/\n|\r/g, " ")
+    text = text.replace(/ /g,"_")
+    // text = text.replace("", "+")
     console.log(text)
     return text;
 }
@@ -91,7 +97,7 @@ function leerCalaverita(){
         // alert(page_type)
         setTimeout(() => {
             modalCalavera.classList.toggle("closeModal");
-            document.getElementById("textCalavera").innerHTML=page_type.replace(", ",",<br>");    
+            document.getElementById("textCalavera").innerHTML=page_type.replace("_"," ");    
         }, 3000);
     }
 }
