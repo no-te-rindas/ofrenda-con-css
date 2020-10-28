@@ -129,11 +129,11 @@ figure{
         height: 100%;
         position: absolute;
     }
-    .face .imgFace.hidden{
+    .face .imgFace.hiddenFace{
         opacity: 0;
         transition: all .8s ease;
     }
-    .face:hover > .imgFace.hidden{
+    .face:hover > .imgFace.hiddenFace{
         opacity: 1;
     }
     /* Animaciones por area */
