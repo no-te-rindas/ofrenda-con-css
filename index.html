@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,6 +86,36 @@
         </div>
     </main>
     <div id="play" class="play-btn icon-play3">
+    </div>
+    <div id="create" class="create-btn">
+        +
+    </div>
+    <div id="modal" class="modalOverlay closeModal">
+        <div class="modal">
+            <a href="#close" id="close" class="close">&times;</a>
+            <div class="modalBody">
+                <form id="form">
+                    <h2>Agrega tu calaverita</h2>
+                    <textarea name="" id="text" cols="30" rows="10" required></textarea>
+                    <button id="btnLink">Crear calaverita</button>
+                    <div id="responseError" class="responseError hidden">El texto de tu calaverita esta vacio...!</div>
+                </form>
+                <div id="wrapperShare" class="wrapperShare hidden">
+                    <h2>Comparte tu calaverita.</h2>
+                    <a id="shareWhatsapp" href="" target="_blank" class="iconShare icon-whatsapp"></a>
+                    <a id="shareTwitter" href="" target="_blank" class="iconShare icon-twitter"></a>
+                    <a id="shareFacebook" href="" target="_blank" class="iconShare icon-facebook2"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modalCalavera" class="modalOverlay closeModal">
+        <div class="modal">
+            <a href="#close" id="closeCalavera" class="close">&times;</a>
+            <div id="textCalavera" class="modalBody textCalavera">
+                calavera
+            </div>
+        </div>
     </div>
     <audio id="audio" src="./assets/llorona.mp3">
         Your browser does not support the <code>audio</code> element.

@@ -5,11 +5,11 @@
 }
 @font-face {
     font-family: 'ofrenda';
-    src:  url('fonts/ofrenda.eot?ai2esd');
-    src:  url('fonts/ofrenda.eot?ai2esd#iefix') format('embedded-opentype'),
-      url('fonts/ofrenda.ttf?ai2esd') format('truetype'),
-      url('fonts/ofrenda.woff?ai2esd') format('woff'),
-      url('fonts/ofrenda.svg?ai2esd#ofrenda') format('svg');
+    src:  url('fonts/ofrenda.eot?bd6x2z');
+    src:  url('fonts/ofrenda.eot?bd6x2z#iefix') format('embedded-opentype'),
+      url('fonts/ofrenda.ttf?bd6x2z') format('truetype'),
+      url('fonts/ofrenda.woff?bd6x2z') format('woff'),
+      url('fonts/ofrenda.svg?bd6x2z#ofrenda') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -26,7 +26,7 @@
     line-height: 1;
   
     /* Better Font Rendering =========== */
-    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
   
@@ -36,8 +36,17 @@
   .icon-pause2:before {
     content: "\ea1d";
   }
+  .icon-facebook2:before {
+    content: "\ea91";
+  }
   .icon-instagram:before {
     content: "\ea92";
+  }
+  .icon-whatsapp:before {
+    content: "\ea93";
+  }
+  .icon-twitter:before {
+    content: "\ea96";
   }
   .icon-github:before {
     content: "\eab0";
@@ -177,8 +186,23 @@ figure{
     align-items: center;
     font-size: 1.5em;
 }
+.create-btn {
+    width: 60px;
+    height: 60px;
+    background: radial-gradient( rgba(255, 0, 128, 0.8) 60%, rgba(255, 255, 255, 1) 62%);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: block;
+    box-shadow: 0px 0px 25px 3px rgba(255, 0, 128, 0.8);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+}
     /* agregamos el pulse y animacion */
-    .play-btn:after {
+    .play-btn:after, .create-btn:after {
         content: "";
         position: absolute;
         width: 145%;
@@ -211,6 +235,116 @@ figure{
                 box-shadow: none;
             }
         }
+/* Modal */
+
+
+.modalOverlay.closeModal{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 2s ease;
+}
+.modalOverlay{ 
+    opacity: 1;  
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0,0,0,.8);
+}
+    
+    .modal{
+        position: absolute;
+        top:5%;
+        bottom: 5%;
+        right: 5%;
+        left: 5%;
+        background:#FFFFFF;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        overflow-y: auto;
+    }
+    #modalCalavera .modal{
+        background:rgba(0,0,0,.5);
+    }
+        .close{
+            position: absolute;
+            top:0;
+            right: 0;
+            background: var(--color-yellow);
+            padding: 5px 10px 8px;
+            text-decoration: none;
+            color:#FFF;
+            font-size: 1.5rem;
+        }
+        .modalBody{
+            height: 80%;
+        }
+            .modalBody h2{
+                color: var(--bg);
+                width: 90%;
+                text-align: center;
+                margin: 10px auto;
+            }
+            .modalBody textarea{
+                width: 90%;
+                display: block;
+                margin: 10px auto;
+                border: 2px solid var(--bg);
+            }
+            .modalBody button{
+                width: 90%;
+                display: block;
+                margin: 10px auto;
+                padding: 10px 0;
+                font-size: 1.3em;
+                color: var(--bg);
+                border: 2px solid var(--bg);
+                background: none;
+            }
+            .modalBody .responseError{
+                border: 2px solid var(--bg);
+                width: 90%;
+                padding: 10px 0;
+                display: block;
+                margin: 10px auto;
+                text-align: center;
+                color: var(--bg);
+                font-size: 1.5em;
+            }
+            .textCalavera{
+                color: #FFFFFF;
+                width: 300px;
+                margin: 0 auto;
+                text-align: center;
+                overflow-y: auto;
+                font-size: 1em;
+                padding: 0 15px;
+            }
+
+/* icons share */
+.wrapperShare{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.hidden{
+    display: none!important;
+}
+.iconShare{
+    width: 50px;
+    height: 50px;
+    font-size: 2.5em;
+    padding: 18px 13px 10px 13px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 50%;
+    color: var(--color-yellow);
+    /* border: 2px solid black; */
+}
 
 @media screen and (min-width:1200px){
     .wrapper {
@@ -235,5 +369,19 @@ figure{
     }
     .sidebar h1{
         font-size: 4.5rem;
+    }
+    .modal{
+        position: absolute;
+        top:20%;
+        bottom: 20%;
+        right: 30%;
+        left: 30%;
+        background:#FFFFFF;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        overflow-y: auto;
     }
 }
