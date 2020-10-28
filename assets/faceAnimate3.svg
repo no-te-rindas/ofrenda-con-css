@@ -19,7 +19,7 @@
     .animate-svg-opacity{
         fill-opacity: 0;
         animation-name: opacidad;
-        animation-duration: 6s;
+        animation-duration: 3s;
         animation-direction: normal;
         animation-timing-function: ease-in-out;
         animation-fill-mode: forwards;   
@@ -60,11 +60,11 @@
 
     <!-- Animacion de fondos -->
     .bgAnimate{
-        fill:#926DE2;
+        fill:#FFFFFF;
         fill-opacity: 0;
         animation-name: animatebg;
         animation-delay: 3s;
-        animation-duration: 20s;
+        animation-duration: 25s;
         animation-iteration-count: infinite;
         animation-direction: normal;
         animation-timing-function: ease-in-out;
@@ -76,15 +76,15 @@
             fill-opacity: 0; 
         }
         50%{
-            fill:#F2778F; 
+            fill:#EFBB14; 
             fill-opacity: 1; 
         }
         60%{
-            fill:#42C3EA; 
+            fill:#88657C; 
             fill-opacity: 1; 
         }
         100%{
-            fill:red; 
+            fill:FFFFFF; 
             fill-opacity: 0; 
         }
     }

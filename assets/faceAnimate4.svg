@@ -60,11 +60,11 @@
 
     <!-- Animacion de fondos -->
     .bgAnimate{
-        fill:#000000;
+        fill:#901A7C;
         fill-opacity: 0;
         animation-name: animatebg;
         animation-delay: 3s;
-        animation-duration: 25s;
+        animation-duration: 20s;
         animation-iteration-count: infinite;
         animation-direction: normal;
         animation-timing-function: ease-in-out;
@@ -72,19 +72,19 @@
     }
     @keyframes animatebg{
         0%{
-            fill:#000000;
+            fill:#901A7C;
             fill-opacity: 0; 
         }
         50%{
-            fill:#83A82E; 
+            fill:#50B9CC; 
             fill-opacity: 1; 
         }
         60%{
-            fill:#F05C06; 
+            fill:#f5be15; 
             fill-opacity: 1; 
         }
         100%{
-            fill:#000000; 
+            fill:#901A7C; 
             fill-opacity: 0; 
         }
     }
