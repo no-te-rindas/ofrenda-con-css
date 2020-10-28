@@ -71,7 +71,7 @@ function createLink(e){
         shareFacebook.href=facebook;
         
 
-        // form.classList.add('hidden');
+        form.classList.add('hidden');
         wrapperShare.classList.remove('hidden');
         console.log(whatsapp)
     }
