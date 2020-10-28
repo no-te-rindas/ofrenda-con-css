@@ -19,10 +19,6 @@
         <button id="btn-animate-all" class="btn btn-animate-all-skulls">
           <img src="assets/flower-3.svg" alt="Flower 3" />
         </button>
-
-        <button class="btn btn-animate-skull">
-          <img src="assets/flower-4.svg" />
-        </button>
       </div>
       <div id="third-row" class="row third-row"></div>
       <div id="fourth-row" class="row fourth-row"></div>
@@ -64,8 +60,8 @@
           let skullsRow = '';
           let direction = index % 2 === 0 ? 'up' : 'down';
 
-          for (let index = 0; index < item.currentScreen / 224; index++) {
-            skullsRow += `<div class="skull skull-${direction}"></div>`;
+          for (let count = 0; count < item.currentScreen / 224; count++) {
+            skullsRow += `<div id="skull${count}${index}" class="skull skull-${direction}"></div>`;
           }
 
           window[item.element].innerHTML = skullsRow;
@@ -84,9 +80,39 @@
       //End Generate
 
       //Action btn animate all skulls
+      const skullElement = document.getElementById('skull31');
+
+      const animationSkull = skullElement.animate(
+        [
+          {
+            transform: 'rotate(0deg)',
+            backgroundImage: 'url(assets/skull-down-pink.svg)',
+          },
+          {
+            transform: 'rotate(540deg)',
+            backgroundImage: 'url(assets/skull-down-white.svg)',
+          },
+        ],
+        {
+          duration: 1000,
+          fill: 'forwards',
+          direction: 'alternate',
+          easing: 'ease-in-out',
+        }
+      );
+
+      let toggle = true;
+
       window['btn-animate-all'].addEventListener('click', () => {
-        console.log('Animate all');
+        if (toggle) {
+          animationSkull.play();
+          toggle = !toggle;
+        } else {
+          animationSkull.reverse();
+        }
       });
+
+      animationSkull.pause();
       //End Action btn animate all skulls
     </script>
   </body>

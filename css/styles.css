@@ -71,6 +71,7 @@ main {
 .skull {
   width: 224px;
   height: 224px;
+  border-radius: 50%;
   flex-shrink: 0;
   background-repeat: no-repeat;
   background-size: 224px;
@@ -116,7 +117,7 @@ main {
 
 .btn-animate-all-skulls {
   top: 0;
-  right: 0;
+  right: 50px;
   background: #ffb000;
 }
 
@@ -132,28 +133,6 @@ main {
 }
 
 .btn-animate-all-skulls:active:before {
-  box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.7),
-    inset 4px 4px 4px rgba(0, 0, 0, 0.3);
-}
-
-.btn-animate-skull {
-  top: 0;
-  right: 100px;
-  background: #2eb3ac;
-}
-
-.btn-animate-skull::before {
-  content: '';
-  position: absolute;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-
-  box-shadow: -3px -3px 6px rgba(255, 255, 255, 0.7),
-    6px 6px 8px rgba(0, 0, 0, 0.3);
-}
-
-.btn-animate-skull:active:before {
   box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.7),
     inset 4px 4px 4px rgba(0, 0, 0, 0.3);
 }
