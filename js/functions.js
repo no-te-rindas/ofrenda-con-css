@@ -21,8 +21,3 @@ function playMusic(){
         play=0;
     }
 }
-
-function init(){
-    playMusic();
-}
-init();
