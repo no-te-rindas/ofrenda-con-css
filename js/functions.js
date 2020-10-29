@@ -96,6 +96,7 @@ function leerCalaverita(){
             txt = page_type.replace(/_/g, " ");
             txt = txt.replace(/,/g, ",<br>");
             document.getElementById("textCalavera").innerHTML=txt.toUpperCase();    
+            playMusic();
         }, 3000);
     }
 }
