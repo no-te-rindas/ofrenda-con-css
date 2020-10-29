@@ -10,7 +10,6 @@ const btnLink = document.getElementById("btnLink");
 const form = document.getElementById("form");
 const wrapperShare = document.getElementById("wrapperShare");
 const shareWhatsapp = document.getElementById("shareWhatsapp");
-const shareTwitter = document.getElementById("shareTwitter");
 const shareFacebook = document.getElementById("shareFacebook");
 const responseError = document.getElementById("responseError");
 let play = 0;
@@ -59,11 +58,10 @@ function createLink(e){
         // creamos url
         const URLactual = window.location;
         url = URLactual.protocol+"//"+URLactual.host+URLactual.pathname+"?calavera="+textoLimpio;
-        whatsapp = "https://web.whatsapp.com/send?text="+url;
-        twitter = "http://www.twitter.com/share?url="+url;
+        urlW = isMobile();
+        whatsapp = urlW+url;
         facebook = "http://www.facebook.com/share.php?u="+url;
         shareWhatsapp.href=whatsapp;
-        shareTwitter.href=twitter;
         shareFacebook.href=facebook;
         
 
@@ -101,5 +99,17 @@ function leerCalaverita(){
     }
 }
 
+function isMobile(){
+    const size = window.matchMedia("(max-width: 1024px)");
+    let urlW;
+    if (size.matches) { 
+        // es mobile
+        urlW = "whatsapp://send?text=";
+    } else {
+        // es escritorio
+        urlW = "https://web.whatsapp.com/send?text=";
+    }
+    return urlW;
+}
 
 leerCalaverita();
