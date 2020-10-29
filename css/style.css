@@ -185,6 +185,7 @@ figure{
     justify-content: center;
     align-items: center;
     font-size: 1.5em;
+    z-index: 100;
 }
 .create-btn {
     width: 60px;
@@ -200,6 +201,7 @@ figure{
     justify-content: center;
     align-items: center;
     font-size: 2.5em;
+    z-index: 100;
 }
     /* agregamos el pulse y animacion */
     .play-btn:after, .create-btn:after {
