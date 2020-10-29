@@ -324,6 +324,7 @@ figure{
                 overflow-y: auto;
                 font-size: 1em;
                 padding: 0 15px;
+                max-height: 350px;
             }
 
 /* icons share */
