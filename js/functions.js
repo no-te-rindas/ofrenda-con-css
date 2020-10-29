@@ -94,8 +94,8 @@ function leerCalaverita(){
         setTimeout(() => {
             modalCalavera.classList.toggle("closeModal");
             txt = page_type.replace(/_/g, " ");
-            txt = txt.replace(/,/g, "<br>");
-            document.getElementById("textCalavera").innerHTML=txt;    
+            txt = txt.replace(/,/g, ",<br>");
+            document.getElementById("textCalavera").innerHTML=txt.toUpperCase();    
         }, 3000);
     }
 }
