@@ -77,7 +77,7 @@ function createLink(e){
 
 function limpiar(text){
     // limpiamos saltos de linea
-    text = text.replace(/\n|\r/g, "<br>")
+    text = text.replace(/\n|\r/g, "£")
     text = text.replace(/ /g,"_")
     // text = text.replace("", "+")
     console.log(text)
@@ -94,6 +94,7 @@ function leerCalaverita(){
         setTimeout(() => {
             modalCalavera.classList.toggle("closeModal");
             txt = page_type.replace(/_/g, " ");
+            txt = tet.replace(/£/g, "<br>")
             txt = txt.replace(/,/g, ",<br>");
             document.getElementById("textCalavera").innerHTML=txt.toUpperCase();    
             playMusic();
