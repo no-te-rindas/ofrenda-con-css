@@ -1,0 +1,138 @@
+:root {
+  --bg: #361154;
+  --witdh: calc(100vw / 7);
+  --height: calc(100vh / 3.5);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Creepster", cursive;
+}
+html,
+body {
+  background: var(--bg);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.row {
+  position: relative;
+  left: calc(var(--witdh) * 0.5 * -1);
+  display: flex;
+  flex-direction: row;
+}
+.row-down {
+  position: relative;
+  /* left: calc(var(--witdh) * 0.5 * -1); */
+  display: flex;
+  flex-direction: row;
+}
+.box {
+  /* height: 100%; */
+  opacity: 1;
+  position: relative;
+}
+.box img {
+  /* width: var(--witdh); */
+  /* height: auto; */
+  height: var(--height);
+  width: auto;
+  z-index: 11;
+}
+.box img:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.box:hover img:nth-child(2) {
+  opacity: 1;
+}
+.title {
+  width: calc(var(--height) * 2);
+  min-width: calc(var(--height) * 2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  position: relative;
+}
+.title h1:nth-child(1) {
+  color: #ffb000;
+}
+.title h1:nth-child(2) {
+  color: #ffffff;
+}
+.spider-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: var(--height);
+  opacity: 0;
+  z-index: 9;
+}
+.spider-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: var(--height);
+  opacity: 0;
+  z-index: 10;
+}
+.title:hover .spider-1 {
+  opacity: 1;
+}
+.title:hover .spider-2 {
+  opacity: 1;
+}
+@-webkit-keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.flower {
+  position: absolute;
+  opacity: 0;
+  z-index: 12;
+}
+.flower-1 {
+  top: 0;
+  left: 0;
+}
+.flower-2 {
+  top: 0;
+  right: 0;
+}
+.flower-3 {
+  bottom: 0;
+  right: 0;
+}
+.flower-4 {
+  bottom: 0;
+  left: 0;
+}
+.title:hover .flower {
+  opacity: 1;
+  animation: rotating 2s linear infinite;
+}
+@media (max-width: 930px) {
+  .title {
+    width: calc(var(--height) * 1);
+    min-width: calc(var(--height) * 1);
+    font-size: 20px;
+  }
+  .spider-1 {
+    width: calc(var(--height) / 2);
+    height: auto;
+  }
+  .spider-2 {
+    width: calc(var(--height) / 4 * 3);
+    height: auto;
+  }
+}
