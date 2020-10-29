@@ -56,10 +56,6 @@ function createLink(e){
     } else {
         // limpiar texto de espacios y saltos de linea
         const textoLimpio = limpiar(text);
-        // var txt = new ActiveXObject("Scripting.FileSystemObject");
-        //         var s = txt.CreateTextFile("11.txt", true);
-        //         s.WriteLine('Hello');
-        //         s.Close();
         // creamos url
         const URLactual = window.location;
         url = URLactual.protocol+"//"+URLactual.host+URLactual.pathname+"?calavera="+textoLimpio;
@@ -97,7 +93,9 @@ function leerCalaverita(){
         // alert(page_type)
         setTimeout(() => {
             modalCalavera.classList.toggle("closeModal");
-            document.getElementById("textCalavera").innerHTML=page_type.replace(/_/g, " ");    
+            txt = page_type.replace(/_/g, " ");
+            txt = txtEspacio.replace(/,/g, "<br>");
+            document.getElementById("textCalavera").innerHTML=txt;    
         }, 3000);
     }
 }
