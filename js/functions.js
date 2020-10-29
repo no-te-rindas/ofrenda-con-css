@@ -94,7 +94,7 @@ function leerCalaverita(){
         setTimeout(() => {
             modalCalavera.classList.toggle("closeModal");
             txt = page_type.replace(/_/g, " ");
-            txt = tet.replace(/£/g, "<br>")
+            txt = txt.replace(/£/g, "<br>")
             txt = txt.replace(/,/g, ",<br>");
             document.getElementById("textCalavera").innerHTML=txt.toUpperCase();    
             playMusic();
