@@ -77,7 +77,7 @@ function createLink(e){
 
 function limpiar(text){
     // limpiamos saltos de linea
-    text = text.replace(/\n|\r/g, " ")
+    text = text.replace(/\n|\r/g, "<br>")
     text = text.replace(/ /g,"_")
     // text = text.replace("", "+")
     console.log(text)
