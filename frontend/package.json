@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "eslint-loader": "^4.0.2",
     "vue": "^2.6.11",
     "vuetify": "^2.2.11"
   },
@@ -43,5 +44,10 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "description": "Ofrenda CSS - reto del dia de los muertos",
+  "main": "main.js",
+  "repository": "https://github.com/calypsobronte/ofrenda-con-css",
+  "author": "Lina María Montaño Ramírez",
+  "license": "MIT"
 }
