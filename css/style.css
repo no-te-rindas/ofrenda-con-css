@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+*{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+.main-container{
+    display: grid;
+    grid-template-columns:repeat(5,19%) ;
+    grid-template-rows: 48vh 48vh;
+    grid-gap: 3px;
+}
+body{
+    margin-top: 10px;
+    background-color: #361154;
+    overflow-y: hidden;
+}
+.head-1 , .head-2{
+    background-color: #DD4182;
+    animation-name: cabeza1;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-delay: 0s;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+.head{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+.head-1{
+    width: 220px;
+    height: 200px;
+    border-radius: 50%;
+}
+.head-2{
+    width: 130px;
+    height: 100px;
+    position: relative;
+    border-radius: 0px 0px 50% 50%;
+    top: -50px;
+    z-index: 1;
+}
+.ojeras{
+    z-index: 2;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    left: 30px;
+    top: -60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ojeras div{
+    background-color: #B82E6A;
+    position: absolute;
+    width: 20px;
+    height: 70px;
+    border-radius: 20px;
+    
+}
+
+.ojeras div:nth-child(2){
+    transform: rotate(90deg);
+}
+.ojeras div:nth-child(3){
+    transform: rotate(45deg);
+}
+.ojeras div:nth-child(4){
+    transform: rotate(-45deg);
+}
+.ojeras:nth-child(2){
+    transform: translate(90px,70px);
+}
+
+.ojeras div:nth-child(5){
+    z-index: 13;
+    background-color:#262238;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border:aliceblue 3px solid;
+}
+
+.cejas{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    top: 60px;
+    left: 20px;
+}
+.cejas div{
+    width: 7px;
+    height: 7px;
+    border-radius: 20px;
+    background-color: white;
+    position: absolute;
+    animation-name: colorpuntos;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-delay: 0s;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+.cejas div:nth-child(2){
+    top:45px;
+}
+.cejas div:nth-child(3){
+    top:30px;
+    left: 4px;
+}
+.cejas div:nth-child(4){
+    top: 20px;
+    left: 12px;
+}
+.cejas div:nth-child(5){
+    top: 10px;
+    left: 25px;
+}
+.cejas div:nth-child(1){
+    left: 45px;
+    top: 6px;
+}
+
+.cejas:nth-child(4){
+    position:relative;
+    transform: translate(120px,-200px) rotate3d(0,0,1,90deg);
+
+}
+
+.sombra-ceja{
+    position: relative;
+    z-index: 12;
+    width: 50px;
+    height: 10px;
+    border-radius: 0% 100% 0% 90%;
+    background: #B82E6A;
+    transform: rotate(45deg);
+    left: 70px;
+    top: -205px;
+}
+.sombra-ceja:nth-child(6){
+    top: -214px;
+    left: 100px;
+    transform: rotate(-60deg)
+}
+.nariz{
+    z-index: 20;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: -160px;
+    left: 95px;
+    
+}
+.nariz div{
+    width: 17px;
+    height: 25px;
+    border-radius:50% 50% 50% 50% / 60% 60% 40% 40% ;
+    position: absolute;
+    background-color: #262238;
+    margin: 3px;
+    border-bottom:solid 4px  #262238;
+}
+.nariz div:nth-child(1){
+    transform: rotate3d(0,0,1,35deg);
+    left: 0px;
+}
+.nariz div:nth-child(2){
+    transform: rotate3d(0,0,1,-35deg);
+    left:10px;
+}
+
+.boca{
+    width: 80px; 
+    height: 40px; 
+    position: absolute;
+    background-color: #262238;
+    border-radius: 0 0 80px 80px;
+    bottom: 25px;
+    left:25px;
+}
+
+.frente{
+    z-index: 20;
+    position: relative;
+    width: 140px;
+    height: 70px;
+    
+    top:-320px;
+    left:40px ;
+}
+
+.cora-izq div,.cora-der div{
+    width: 17px;
+    height: 30px;
+    border-radius:50% 50% 50% 50% / 60% 60% 40% 40% ;
+    position: absolute;
+    background-color: white;
+    margin: 3px;
+    border-bottom:solid 4px  white;
+
+    animation-name: colorpuntos;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-delay: 0s;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+.cora-izq div:nth-child(1){
+    transform: rotate3d(0,0,1,150deg);
+    left: 12px;
+}
+.cora-izq div:nth-child(2){
+    transform: rotate3d(0,0,1,-150deg);
+    left:22px;
+}
+
+.cora-der div:nth-child(1){
+    transform: rotate3d(0,0,1,150deg);
+    left: 97px;
+}
+.cora-der div:nth-child(2){
+    transform: rotate3d(0,0,1,-150deg);
+    left:107px;
+}
+
+.puntos{
+    width: 40px;
+    height: 80px;
+    position: absolute;
+    top:-10px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.puntos div{
+    border-radius: 50%;
+    background-color: white;
+    animation-name: colorpuntos;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-delay: 0s;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+.puntos div:nth-child(1){
+    width: 20px;
+    height: 20px;
+}
+
+.puntos div:nth-child(2){
+    width: 15px;
+    height: 15px;
+}
+.puntos div:nth-child(3){
+    width: 10px;
+    height: 10px;
+}
+
+.rev{
+    transform: rotate(180deg);
+    animation-name: cabeza2;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction:normal;
+    animation-play-state: running;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+.titulo{
+    grid-column: 4 / 6;
+    font-size: 2.5em;
+}
+.titulo h1{
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+.titulo h1 span{
+    color:#FFB000;
+}
+
+@keyframes cabeza1{
+    from{
+        background-color: #DD4182;
+    }
+    to{
+        background-color: #fff;
+    }
+}
+
+@keyframes cabeza2{
+    from{
+        transform: rotate(180deg);
+    }
+    to{
+        transform: rotate(540deg);
+    }
+}
+@keyframes colorpuntos{
+    from{
+        background-color: white;
+    }
+    to{
+        background-color: black;
+    }
+}
