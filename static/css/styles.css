@@ -1,0 +1,99 @@
+:root {
+  --bg-body: #361154;
+  --color-white: #ffffff;
+  --color-yellow: #ffb000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--bg-body);
+}
+
+.main {
+  width: 100%;
+  max-width: 1360px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 840px 500px;
+  grid-template-rows: repeat(3 auto);
+  grid-template-areas: "top top" "left right" "bottom bottom";
+}
+
+.main .skull {
+  margin: 0;
+  padding: 0;
+  width: 220px;
+  height: 224px;
+}
+
+.main .skull-up:hover {
+  transition: 0.5s ease all;
+  content: url("../images/up-hover.svg");
+}
+
+.main .skull-down:hover {
+  transition: 0.5s ease all;
+  content: url("../images/down-hover.svg");
+}
+
+.main .section-top {
+  grid-area: top;
+  width: 1355px;
+  height: 224px;
+  margin-left: -24px;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(7 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "skull skull skull skull skull skull skull";
+  justify-content: space-evenly;
+}
+
+.main .section-left {
+  grid-area: left;
+  width: 678px;
+  height: 224px;
+  margin-left: -24px;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(4 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "skull skull skull skull";
+  justify-content: space-evenly;
+}
+
+.main .section-right {
+  grid-area: right;
+  width: 500px;
+  height: 194px;
+}
+
+.main .section-right .title-trucazos {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 97px;
+  color: var(--color-white);
+}
+
+.main .section-right .title-trucazos .span-trucazos {
+  color: var(--color-yellow);
+}
+
+.main .section-bottom {
+  grid-area: bottom;
+  width: 1355px;
+  height: 224px;
+  margin-left: -24px;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(7 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "skull skull skull skull skull skull skull";
+  justify-content: space-evenly;
+}
