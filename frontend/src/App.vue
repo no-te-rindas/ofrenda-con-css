@@ -2,56 +2,69 @@
   <v-app>
     <v-app-bar
       app
-      color="primary"
+      color="#B82E6A"
       dark
     >
       <div class="d-flex align-center">
         <v-img
-          alt="Vuetify Logo"
+          alt="Ofrenda CSS Logo"
           class="shrink mr-2"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          src="../../frontend/src/assets/logo.svg"
           transition="scale-transition"
           width="40"
         />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
+        <h1>Ofrenda CSS</h1>
       </div>
 
       <v-spacer></v-spacer>
 
       <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        href="https://github.com/calypsobronte/"
         target="_blank"
         text
       >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+        <span class="mr-2">calypsobronte</span>
+        <v-icon>mdi-github</v-icon>
+      </v-btn>
+      <v-btn
+        href="https://leonidasesteban.com/cursos/javascript-react"
+        target="_blank"
+        text
+      >
+        <span class="mr-2">mira el curso de Leonidas Esteban</span>
+        <v-icon>mdi-account-star</v-icon>
       </v-btn>
     </v-app-bar>
 
-    <v-main>
-      <HelloWorld/>
+    <v-main class="back"> 
+      <OfrendaCSS/>
     </v-main>
+
+    <v-footer
+      dark
+      padless
+    >
+      <v-card-text class="py-2 white--text text-center">
+        <v-icon color="red">mdi-heart</v-icon>
+        {{ new Date().getFullYear() }} — 
+        <span>calypsobronte</span>
+      </v-card-text>
+  </v-footer>
+
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import OfrendaCSS from './views/OfrendaCSS';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    OfrendaCSS,
   },
+  
 
   data: () => ({
     //
