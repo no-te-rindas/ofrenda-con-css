@@ -42,7 +42,7 @@
         <div>
           <span>Trucazos</span>
         <br>
-        <p class="mas-alla">del más allá</p>
+        <p class="mas-alla">del más allá</p><br><br>
         </div>
       </v-col>
       <v-col v-for="x in 9" :key="x"><br><br>
