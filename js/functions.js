@@ -77,6 +77,7 @@ function limpiar(text){
     // limpiamos saltos de linea
     text = text.replace(/\n|\r/g, "£")
     text = text.replace(/ /g,"_")
+    text = text.replace(/,/g,"-")
     // text = text.replace("", "+")
     console.log(text)
     return text;
@@ -93,7 +94,7 @@ function leerCalaverita(){
             modalCalavera.classList.toggle("closeModal");
             txt = page_type.replace(/_/g, " ");
             txt = txt.replace(/£/g, "<br>")
-            txt = txt.replace(/,/g, ",<br>");
+            txt = txt.replace(/-/g, ",<br>");
             document.getElementById("textCalavera").innerHTML=txt.toUpperCase();
         }, 3000);
     }
