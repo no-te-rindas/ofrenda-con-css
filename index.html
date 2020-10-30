@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofrenda</title>
+    <meta property="og:url" content="https://shinobiluis.github.io/ofrenda-con-css/index.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Ofrenda" />
+    <meta property="og:description" content="Crea tú calaverita y compártela al mundo." />
+    <meta property="og:image" content="https://shinobiluis.github.io/ofrenda-con-css/assets/ofrenda.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main class="wrapper">
+        <div class="header">
+            <figure class="face">
+                <img src="./assets/faceAnimate1.svg" alt="" class="imgFace">
+                <img src="./assets/up2.svg" alt="" class="imgFace hiddenFace">
+            </figure>
+            <figure class="face">
+                <img src="./assets/up1.svg" alt="" class="imgFace">
+                <img src="./assets/up2.svg" alt="" class="imgFace hiddenFace">
+            </figure>
+            <figure class="face">
+                <img src="./assets/up1.svg" alt="" class="imgFace">
+                <img src="./assets/up2.svg" alt="" class="imgFace hiddenFace">
+            </figure>
+            <figure class="face">
+                <img src="./assets/up1.svg" alt="" class="imgFace">
+                <img src="./assets/up2.svg" alt="" class="imgFace hiddenFace">
+            </figure>
+            <figure class="face">
+                <img src="./assets/faceAnimate2.svg" alt="" class="imgFace">
+                <img src="./assets/up2.svg" alt="" class="imgFace hiddenFace">
+            </figure>
+            <figure class="face">
+                <img src="./assets/up1.svg" alt="" class="imgFace">
+                <img src="./assets/up2.svg" alt="" class="imgFace hiddenFace">
+            </figure>
+        </div>
+        <div class="main">
+            <figure class="face">
+                <img src="./assets/up1.svg" alt="" class="imgFace">
+                <img src="./assets/up2.svg" alt="" class="imgFace hiddenFace">
+            </figure>
+            <figure class="face">
+                <img src="./assets/faceAnimate3.svg" alt="" class="imgFace">
+                <img src="./assets/up2.svg" alt="" class="imgFace hiddenFace">
+            </figure>
+            <figure class="face">
+                <img src="./assets/up1.svg" alt="" class="imgFace">
+                <img src="./assets/up2.svg" alt="" class="imgFace hiddenFace">
+            </figure>
+        </div>
+        <div class="sidebar">
+            <h1><strong>¿Me das para</strong> <br> mi calaverita?</h1>
+        </div>
+        <div class="footer">
+            <figure class="face">
+                <img src="./assets/up1.svg" alt="" class="imgFace">
+                <img src="./assets/up2.svg" alt="" class="imgFace hiddenFace">
+            </figure>
+            <figure class="face">
+                <img src="./assets/up1.svg" alt="" class="imgFace">
+                <img src="./assets/up2.svg" alt="" class="imgFace hiddenFace">
+            </figure>
+            <figure class="face">
+                <img src="./assets/up1.svg" alt="" class="imgFace">
+                <img src="./assets/up2.svg" alt="" class="imgFace hiddenFace">
+            </figure>
+            <figure class="face">
+                <img src="./assets/faceAnimate4.svg" alt="" class="imgFace">
+                <img src="./assets/up2.svg" alt="" class="imgFace hiddenFace">
+            </figure>
+            <figure class="face">
+                <img src="./assets/up1.svg" alt="" class="imgFace">
+                <img src="./assets/up2.svg" alt="" class="imgFace hiddenFace">
+            </figure>
+            <figure class="face">
+                <img src="./assets/faceAnimate5.svg" alt="" class="imgFace">
+                <img src="./assets/up2.svg" alt="" class="imgFace hiddenFace">
+            </figure>
+        </div>
+    </main>
+    <div id="play" class="play-btn icon-play3">
+    </div>
+    <div id="create" class="create-btn">
+        +
+    </div>
+    <div id="modal" class="modalOverlay closeModal">
+        <div class="modal">
+            <a href="#close" id="close" class="close">&times;</a>
+            <div class="modalBody">
+                <form id="form" method="GET"  action="/">
+                    <h2>Escribe tú calaverita</h2>
+                    <textarea name="calaverita" id="text" cols="30" rows="10" required></textarea>
+                    <button type="submit" id="btnLink">Crear calaverita</button>
+                    <div id="responseError" class="responseError hidden">El texto de tu calaverita esta vacio...!</div>
+                </form>
+                <div id="wrapperShare" class="wrapperShare hidden">
+                    <h2>Comparte tu calaverita.</h2>
+                    <a id="shareWhatsapp" href="" target="_blank" class="iconShare icon-whatsapp"></a>
+                    <a id="shareFacebook" href="" target="_blank" class="iconShare icon-facebook2"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modalCalavera" class="modalOverlay closeModal">
+        <div class="modal">
+            <a href="#close" id="closeCalavera" class="close">&times;</a>
+            <div id="textCalavera" class="modalBody textCalavera">
+            </div>
+        </div>
+    </div>
+    <audio id="audio" src="./assets/llorona.mp3">
+        Your browser does not support the <code>audio</code> element.
+    </audio>
+    <script src="./js/functions.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+/**
+ * CSS para el grid principal
+ */
+.wrapper {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "header header header header"
+        "main main sidebar sidebar"
+        "footer footer footer footer";
+    gap: 10px 0px;
+}
+    .header {
+        grid-area: header;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .sidebar{
+        grid-area: sidebar;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer {
+        grid-area: footer;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+.header .face:nth-child(1n) {
+    transform: rotate(0deg);
+}
+.header .face:nth-child(2n) {
+    transform: rotate(180deg);
+}
+.main .face:nth-child(2n) {
+    transform: rotate(180deg);
+}
+.footer .face:nth-child(1n) {
+    transform: rotate(0deg);
+}
+.footer .face:nth-child(2n) {
+    transform: rotate(180deg);
+}
+.face{
+    position: relative;
+    transition: all .8s ease;
+    border-radius: 50%;
+    overflow: hidden;
+}
+    .face .imgFace{
+        width: auto;
+        height: 100%;
+        position: absolute;
+    }
+    .face .imgFace.hidden{
+        opacity: 0;
+        transition: all .8s ease;
+    }
+    .face:hover > .imgFace.hidden{
+        opacity: 1;
+    }
+    /* Animaciones por area */
+    .header .face:hover:nth-child(1n){
+        transform: rotate(540deg);
+    }
+    .header .face:hover:nth-child(2n){
+        transform: rotate(720deg);
+    }
+    .main .face:hover:nth-child(1n){
+        transform: rotate(540deg);
+    }
+    .main .face:hover:nth-child(2n){
+        transform: rotate(720deg);
+    }
+    .footer .face:hover:nth-child(1n){
+        transform: rotate(540deg);
+    }
+    .footer .face:hover:nth-child(2n){
+        transform: rotate(720deg);
+    }
+    
+/* sidebar */
+.sidebar h1{
+    font-size: 4vw;
+    width: 550px;
+}
+.sidebar h1 strong{
+    color: var(--color-yellow);
+}
