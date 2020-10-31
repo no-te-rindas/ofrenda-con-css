@@ -75,7 +75,7 @@ main {
   flex-shrink: 0;
   background-repeat: no-repeat;
   background-size: 224px;
-  transition: all 2s ease-in-out;
+  transition: all 1.7s ease-in-out;
 }
 
 .skull-up {
