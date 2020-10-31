@@ -76,7 +76,12 @@
 
       generateSkulls(arrayElements);
 
-      
+      setInterval(() => {
+        if (screenWidth !== screen.width) {
+          screenWidth = screen.width;
+          generateSkulls(arrayElements);
+        }
+      }, 1000);
 
       //Autoplay sound
       arrayElements.forEach( element => {
@@ -94,7 +99,7 @@
       .mouseenter(function() {
         $("#beep-two" + $(this).data("beeper"))[0].play();
         });
-        $("#beep-two").attr("id", "beep-two0"); 
+        $("#beep-two").attr("id", "beep-two0");
       })
     </script>
   </body>
