@@ -1,32 +1,15 @@
-# Concurso Día de muertos
-​
-En México cada año se celebra durante el 1 y 2 de noviembre el día de muertos, una tradición que es reconocida mundialmente y de la cual una parte muy importante son las ofrendas, las flores de cempasúchil, el papel picado y las calaveritas de dulce, tomando estos elementos creamos el reto #OfrendaConCSS.
+### Información :
 
-​
-El reto es replicar este diseño en HTML y CSS. 🎨
+- Twitter : @\_rogeliop
+- Email : rogelio_133@outlook.com
+- URL: https://rogelio133.github.io/ofrenda-con-css/
 
-​
-![Gif de día de muertos](https://media.giphy.com/media/wWEbXnf9GWaAmWF9i2/giphy.gif)
+### Sobre el reto :
 
-​
-Puedes revisar los assets en este figma: [Ver el diseño](https://www.figma.com/file/gh1XBw0fzJYc4IQrO6YLMT/Reto-Dia-de-muertos?node-id=1%3A15).
-​
+Dependiendo la resolución de la pantalla se ajusta la cantidad de filas y columnas y la posición del titulo **Trucazos del más alla**, ademas de que por cada fila se ajusta la posicion **up/down** de la calaverita.
 
-Y también puedes ver la animación aquí: [Ver animación](https://www.figma.com/proto/gh1XBw0fzJYc4IQrO6YLMT/Reto-Dia-de-muertos?node-id=1%3A15&viewport=448%2C-90%2C0.38436636328697205&scaling=min-zoom).
-​
-### Bases:
+![screenshot 01](https://rogelio133.github.io/ofrenda-con-css/src/images/screenshot_01.png)
 
-- Tienes que hacer un fork a este repositorio.
-- Haz un solo pull request con el reto terminado.
-- En la descripción del pull request coloca tu correo.
-- Los pull request serán aceptados del 24 de octubre al 2 de noviembre a las 11:59 PM
-​
+![screenshot 02](https://rogelio133.github.io/ofrenda-con-css/src/images/screenshot_02.png)
 
-Siéntete libre de decorar la calaverita a tu gusto, el diseño solo te sirve de guía, pero valoramos muchísimo tu creatividad y tus habilidades, así que deja tu cabeza volar que estamos ansiosos de ver tu creación.
-​
-
-Utiliza el **#OfrendaConCSS** para mostrar tu avance, o tu reto terminado en redes sociales, no dudes en etiquetar a @LeonidasEsteban.
-​
-### Premios 🎁
-​
-Recibirás un correo con un **premio sorpresa**, exclusivamente para ti, puede ser una mentoría gratis con Leónidas Esteban o muchas más sorpresas.
+![screenshot 03](https://rogelio133.github.io/ofrenda-con-css/src/images/screenshot_03.png)
