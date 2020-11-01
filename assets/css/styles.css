@@ -23,6 +23,22 @@ img {
     width: 200px;
 }
 
+img:hover {
+    content: url('../img/skull.svg');
+    width: 200px;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 .down  {
     transform: rotate(-180deg);
 }
