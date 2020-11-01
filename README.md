@@ -1,6 +1,6 @@
 ### Información :
 
-- Twitter : @\_ropeliop
+- Twitter : @\_rogeliop
 - Email : rogelio_133@outlook.com
 - URL: https://rogelio133.github.io/ofrenda-con-css/
 
