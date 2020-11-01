@@ -2,7 +2,7 @@
 
 - Twitter : @\_ropeliop
 - Email : rogelio_133@outlook.com
-- URL:
+- URL: https://rogelio133.github.io/ofrenda-con-css/
 
 ### Sobre el reto :
 
